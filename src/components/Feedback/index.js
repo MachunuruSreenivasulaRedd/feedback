@@ -28,16 +28,18 @@ class Feedback extends Component {
       <div className="container">
         <h1>How satisfied are you with our customer support performance</h1>
         {emojis.map(item => (
-          <button type="button" onClick={this.onFeed}>
-            <img src={item.imageUrl} alt="im" />
-          </button>
+          <li key={item.id}>
+            <button type="button" onClick={this.onFeed}>
+              <img src={item.imageUrl} alt="im" />
+            </button>
+          </li>
         ))}
       </div>
     )
 
     return (
       <div>
-        ({clicked} ? {open} : {feedback})
+        {clicked} ? {open} : {feedback}
       </div>
     )
   }
